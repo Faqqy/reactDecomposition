@@ -1,11 +1,11 @@
 import NewsItem from "./NewsItem";
-import { NewsType } from '../../types/types';
+import { INewsType } from '../../common/types';
 
-type NewsTypeProps = {
-    news: NewsType[];
+interface NewINewsType {
+    news: INewsType[];
 }
 
-export default function NewsList ({news}: NewsTypeProps) {
+export default function NewsList ({ news }: NewINewsType) {
 
     news = [{id: 1, icon: '#', title: 'Суд в США отказал СМИ в съемке процесса над Трампом'}, 
         {id: 2, icon: '#', title: 'Счетная палата назвала крупнейших плательщиков дивидендов в бюджет'}, 

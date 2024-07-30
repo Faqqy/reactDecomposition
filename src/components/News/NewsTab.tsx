@@ -7,6 +7,13 @@ export default function NewsTabs () {
         return 'в России';
     }
     
+    const nowDate = new Date().toLocaleString('ru', {
+        day: 'numeric',
+        month: 'long',
+        weekday: 'long',
+        hour: 'numeric',
+        minute: 'numeric'
+      });
 
     return (
         <div>
@@ -22,7 +29,7 @@ export default function NewsTabs () {
                 </li>
             </ul>
             <div>
-            {/* текущие время и дата*/}
+            { nowDate }
             </div>
       </div>
     )

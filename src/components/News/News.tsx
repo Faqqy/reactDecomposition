@@ -1,22 +1,26 @@
 import { useState, useEffect } from 'react';
+import { INewsType } from '../../common/types';
 import NewsTabs from './NewsTab';
 import NewsList from './NewsList';
-import { NewsType } from '../../types/types';
+import NewsRightImgBlock from './NewsRightImgBlock';
+import ImgBlock from '../../assets/cat.jpg';
+
 
 
 export default function News () {
 
-    const [news, setNews] = useState<NewsType[]>([]);
+    let [news, setNews] = useState<INewsType[]>([]);
 
     useEffect(() => {
-        return;
       // получаем список новостей и сохраняем в state
-    }, [news]);
+      setNews(news = []);
+    }, []);
 
     return (
         <>
             <NewsTabs />
             <NewsList news={news}/>
+            <NewsRightImgBlock img={ImgBlock} />
         </>
     )
 }

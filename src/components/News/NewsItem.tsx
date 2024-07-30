@@ -1,7 +1,7 @@
-import { NewsType } from '../../types/types';
+import { INewsType } from '../../common/types';
 
-type NewsItemProps = {
-    item: NewsType;
+interface NewsItemProps {
+    item: INewsType;
 }
 
 export default function NewsItem ({item}: NewsItemProps) {
