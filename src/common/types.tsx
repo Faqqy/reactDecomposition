@@ -17,9 +17,22 @@ export interface ISearchTab {
 }
 
 export interface INodes {
-    children: React.ReactNode;
+    children: React.ReactNode
 }
 
 export interface IRightBlock {
-    img: string;
+    img: string
+}
+
+export interface ILogo {
+    img: string
+}
+
+export interface IBanner {
+    img: string
+}
+
+export interface IwidgetCards {
+    title: string,
+    children: React.ReactNode
 }
